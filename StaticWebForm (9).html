@@ -1,0 +1,533 @@
+
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en" >
+
+<script language="javascript">
+	function toggleVisiblity(whsElementName) {
+		var currentElement = document.getElementById(whsElementName);
+		if(currentElement.style.display == "block")
+			currentElement.style.display = "none";
+		else
+			currentElement.style.display = "block";
+	}
+</script>
+<html>
+	<head id="Head1"><link type="text/css" rel="stylesheet" href="https://ppm.daptiv.com/7.0.0.7006/Media/Styles/ppm.css" /><script type='text/javascript'>var TIMEZONEADJUSTMENTRULE = {"DaylightOffsetInMinutes":-60,"DaylightEnd":{"Month":11,"Day":0,"Hour":2,"Minute":0,"DayOfWeek":0,"Week":1},"DaylightStart":{"Month":3,"Day":0,"Hour":2,"Minute":0,"DayOfWeek":0,"Week":2},"StandardName":"Pacific Standard Time","StandardUtcOffsetInMinutes":-480};</script><script type='text/javascript'>var CLOSURE_NO_DEPS=true,
+                        SCRIPT_ERROR_LOGGING_ENABLED=true,
+                        DAPTIV_WEB_ROOT='https://ppm.daptiv.com',
+                        DAPTIV_API_ROOT='https://ppm.daptiv.com/_api',
+                        DAPTIV_HELP_ROOT_URL='http://h.daptiv.com/Help/PPM',
+                        DAPTIV_IMAGE_WEB_ROOT='https://ppm.daptiv.com/7.0.0.7006/Media/Graphics'</script><script src="https://ppm.daptiv.com/7.0.0.7006/scripts/base.js"></script><script src="https://ppm.daptiv.com/7.0.0.7006/scripts/daptiv_deps.js"></script><script src="https://ppm.daptiv.com/7.0.0.7006/scripts/Libraries/jQuery/jQueryAll.js"></script><script src="https://ppm.daptiv.com/7.0.0.7006/scripts/globalScripts.js"></script><script src="https://ppm.daptiv.com/7.0.0.7006/scripts/daptiv/globalization/en-GB.js"></script><script type='text/javascript' src='https://ppm.daptiv.com/global/CultureFormatters.ashx?culture=en-GB&entcurrency=en-GB&uiculture=en-US&v=7.0.0.7006'></script>
+<script type='text/javascript'>
+                $.preferCulture("en-GB");
+                var currencyCulture = $.findClosestCulture('en-GB');
+                $.culture.numberFormat.currency = currencyCulture.numberFormat.currency;</script><script type='text/javascript'>var spaAuthTokenCookieEnvironmentTag = 'production';</script><link type="text/css" rel="stylesheet" href="https://ppm.daptiv.com/7.0.0.7006/Media/Styles/itembrowser.css" /><link type="text/css" rel="stylesheet" href="https://ppm.daptiv.com/7.0.0.7006/Media/Styles/LegacyModalMessageBox.css" /><link type="text/css" rel="stylesheet" href="../../global/scripts/libraries/jQuery/plugins/dropdown/dropdown.css" /><link type="text/css" rel="stylesheet" href="https://ppm.daptiv.com/7.0.0.7006/Media/Styles/jqueryui.css" /><link type="text/css" rel="stylesheet" href="https://ppm.daptiv.com/7.0.0.7006/Media/Styles/styles.css" /><link type="text/css" rel="stylesheet" href="https://ppm.daptiv.com/7.0.0.7006/Media/Styles/Navigation/Navigation.css" /><link rel="icon" href="https://ppm.daptiv.com/7.0.0.7006/Media/graphics/favicon.ico" type="image/ico" /><link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://ppm.daptiv.com/7.0.0.7006/Media/graphics/icons/home-icon-57.png" /><link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://ppm.daptiv.com/7.0.0.7006/Media/graphics/icons/home-icon-72.png" /><link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://ppm.daptiv.com/7.0.0.7006/Media/graphics/icons/home-icon-114.png" /><link rel="SHORTCUT ICON" href="https://ppm.daptiv.com/7.0.0.7006/Media/graphics/favicon.ico" />
+<script>
+	eProject.Search.SearchPagePath = "https://ppm.daptiv.com/Search/Search.aspx?oid=ee59a4b0-ff43-45b1-a1ef-d71437ee00bc|4f5a179a-0456-47dc-ba9c-cf6469148ae8";
+var searchAreaDropdownOptions={picklistOptions: [{label:'All',id:31},{label:'Workspaces',id:2},{label:'Documents',id:8},{label:'Documents + Contents',id:24},{label:'Applications',id:4},{label:'Users',id:1}], hideNoneOption: true, closeMenuOnBlur: true };
+
+</script>
+<script src="https://ppm.daptiv.com/7.0.0.7006/scripts/daptiv/res/Common_en.js"></script><title>
+	Daptiv PPM - Create Request
+</title></head>
+	<head>
+		<title >Create Request</title>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="C#" name="CODE_LANGUAGE">
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<link rel="stylesheet" href="https://ppm.daptiv.com/7.0.0.7006/Media/Styles/styles.css" />
+		<link rel="stylesheet" href="https://ppm.daptiv.com/7.0.0.7006/Media/Styles/itembrowser.css" />
+		<script language="javascript">
+			function ShowSystemMessageOnParent(m, type)
+			{
+				var mbox = eval("window.opener.Page_MessageBox");
+				
+				if (typeof(mbox) != "undefined")
+				{
+					mbox.Show(m, type, Page_MessageBox.ButtonsEnum.None, "", "", false);
+				}
+			}
+		</script>
+	</head>
+	<body bottommargin="0" topmargin="0" leftmargin="0" rightmargin="0">
+		<form name="frmMain" method="post" action="../ProjectRequest/StaticWebForm/ProjectRequestStaticWebFormIO.aspx?oid=ee59a4b0-ff43-45b1-a1ef-d71437ee00bc%7c4f5a179a-0456-47dc-ba9c-cf6469148ae8&amp;pageviewid=Admin%2fProjectRequest%2fCreateProjectRequestWizard2.ascx&amp;tab=Empty&amp;nav=0&amp;prtypeid=8122bd02-d121-4607-95f9-592045150f80&amp;isgeneratingwebform=true&amp;IsStaticWebForm=1" onsubmit="javascript:return WebForm_OnSubmit();" id="frmMain" enctype="multipart/form-data">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['frmMain'];
+if (!theForm) {
+    theForm = document.frmMain;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="https://ppm.daptiv.com/WebResource.axd?d=LjiAgnMU0Fyf2-tUPR4WaFBDexV-X-S5XzLuHogiula7c19kfz3ER1sX-PPlXTXA9_AvRBZRClKlqYbZ1BG4zR5C_v01&amp;t=636426603113374701" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+goog.require('Libraries.evergage');//]]>
+</script>
+
+<script src="https://ppm.daptiv.com/7.0.0.7006/scripts/Libraries/BabelPolyfill/polyfill.js" type="text/javascript"></script><script language=JavaScript>
+                    function filesSupported(){
+                        return $('<input type=file>')    
+                        .get(0)               
+                        .files !== undefined; 
+                    }
+                    
+                    function fnValidate(sender, args) {
+                            var xUpload = document.getElementById('uploadField');
+                            var bResult = true;
+                            
+                            if(filesSupported()){
+                                var fileUploads = $(':file');
+                                var combinedSize = 0;
+                                fileUploads.each(function(element) {
+                                    var file = $(this).prop('files')[0];
+                                    if(file !== null && file !== undefined) {
+                                        var filesize = file.size / 1024;
+                                        combinedSize += filesize;
+                                    }
+
+                                    if(combinedSize > 153600){
+                                        eProject.Widgets.ModalMessageBox.Error('An error occurred while uploading the document.', 'You cannot upload a file or files whose combined size exceeds 150MB');
+                                        bResult = false;
+                                        return false;
+                                    }
+                                });
+                            }
+
+                        args.IsValid = bResult;
+                    }
+                    </script>
+                <script language='javascript'>
+            function ShowSystemMessageOnParent(m, type)
+            {
+                try {
+                    var tryToAccessAncestor = window.opener.document.domain;
+                }
+                catch(e) {
+                    // if we fail to access the ancestor's properties, the subdomains might differ resulting in cross-domain error
+                    // update the doc domain to match ancestor
+                    var hostVals = window.location.hostname.split(".");
+                    document.domain = hostVals.splice(hostVals.length - 2, hostVals.length).join(".");
+                }
+
+                try {
+                    if (window.opener && window.opener.Page_MessageBox) {
+                        window.opener.Page_MessageBox.Show(m, type, 0, ", ", false);
+                    }
+                }
+                catch(e) {
+                    // if we still fail to access the ancestor's properties, we likely were opened by a foxglove page.
+                    // give up on displaying a message and just close the window.
+                }
+            }</script>
+<SCRIPT  type='text/javascript'>
+       var newjsdiv = document.createElement('DIV');
+       newjsdiv.id='LocalizedResources';
+       document.body.insertBefore(newjsdiv, document.body.firstChild);
+</SCRIPT><script type="text/javascript">goog.require('itembrowser_nav');</script>
+<script src="https://ppm.daptiv.com/WebResource.axd?d=OnPG1oRsVE-4CtbNji12Rej3huMfR__tPQjdYw4ua2WFVsWzIJS6ZWquvwe-rlsZwtqa6DfZ-BIv00U7CUgimDHapG2iy461hVHQ0M9DnU_gzLse0&amp;t=636426603113374701" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;return changeFormAction();
+return true;
+}
+//]]>
+</script>
+
+			<table height="100%" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr><td>
+					<!-- // BEGIN TAB STRIP // -->
+					<table width="100%" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+			            <td valign="top" class="itembrowser-headerlabel">
+				            
+			                <div class="cp-header">
+			                Create Request - Project Request Type</div>    
+			            </td>
+					</tr>
+					<tr>
+						<td nowrap class="itembrowser-header" width="100%">
+							<div class="daptiv-nav-container">
+	<nav class="daptiv-nav empty">
+
+	</nav>
+</div>
+						</td>
+					</tr>
+					</table>
+					<!-- // END TAB STRIP // -->
+				</td></tr>
+				<tr><td>
+					<!-- // BEGIN TOOLBAR // -->
+					<table id="htmlTable_ToolBar" width="100%" cellpadding="4" cellspacing="0" border="0" class="ItemDetails_Toolbar">
+	<tr>
+		<td><img src="https://ppm.daptiv.com/7.0.0.7006/Media/Graphics/inv.gif" width=1 height=1 /></td>
+	</tr>
+	<tr>
+		<td nowrap="nowrap">
+							<span id="ivToolBar"></span>
+						</td>
+	</tr>
+</table>
+
+					<!-- // END TOOLBAR // -->
+				</td></tr>
+				<tr><td class="itembrowser-form-bgwhite">
+					<div id="MessageBox" class="messageBox" align="center"><Div Id="MessageBox_Information" Style="display:none;" class="message-Item"><table border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="info_topLeft"></td><td class="msgbox-cell-info"></td><td class="info_topRight"></td>
+	</tr><tr>
+		<td class="msgbox-cell-info"></td><td class="msgbox-cell-info"><Div Id="MessageBox_Information_msg" Class="msgbox-text-black">
+
+		</Div></td><td class="msgbox-cell-info"></td>
+	</tr><tr>
+		<td class="msgbox-cell-info"></td><td class="msgbox-cell-info" align="center"><span id="MessageBox_Information_buttons"></span></td><td class="msgbox-cell-info"></td>
+	</tr><tr>
+		<td class="info_bottomLeft"></td><td class="msgbox-cell-info"></td><td class="info_bottomRight"></td>
+	</tr>
+</table>
+</Div><Div Id="MessageBox_Positive" Style="display:none;" class="message-Item"><table border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="positive_topLeft"></td><td class="msgbox-cell-positive"></td><td class="positive_topRight"></td>
+	</tr><tr>
+		<td class="msgbox-cell-positive"></td><td class="msgbox-cell-positive"><Div Id="MessageBox_Positive_msg" Class="msgbox-text-white">
+
+		</Div></td><td class="msgbox-cell-positive"></td>
+	</tr><tr>
+		<td class="msgbox-cell-positive"></td><td class="msgbox-cell-positive" align="center"><span id="MessageBox_Positive_buttons"></span></td><td class="msgbox-cell-positive"></td>
+	</tr><tr>
+		<td class="positive_bottomLeft"></td><td class="msgbox-cell-positive"></td><td class="positive_bottomRight"></td>
+	</tr>
+</table>
+</Div><Div Id="MessageBox_Neutral" Style="display:none;" class="message-Item"><table border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="neutral_topLeft"></td><td class="msgbox-cell-neutral"></td><td class="neutral_topRight"></td>
+	</tr><tr>
+		<td class="msgbox-cell-neutral"></td><td class="msgbox-cell-neutral"><Div Id="MessageBox_Neutral_msg" Class="msgbox-text-white">
+
+		</Div></td><td class="msgbox-cell-neutral"></td>
+	</tr><tr>
+		<td class="msgbox-cell-neutral"></td><td class="msgbox-cell-neutral" align="center"><span id="MessageBox_Neutral_buttons"></span></td><td class="msgbox-cell-neutral"></td>
+	</tr><tr>
+		<td class="neutral_bottomLeft"></td><td class="msgbox-cell-neutral"></td><td class="neutral_bottomRight"></td>
+	</tr>
+</table>
+</Div><Div Id="MessageBox_Negative" Style="display:none;" class="message-Item"><table border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="negative_topLeft"></td><td class="msgbox-cell-negative"></td><td class="negative_topRight"></td>
+	</tr><tr>
+		<td class="msgbox-cell-negative"></td><td class="msgbox-cell-negative"><Div Id="MessageBox_Negative_msg" Class="msgbox-text-white">
+
+		</Div></td><td class="msgbox-cell-negative"></td>
+	</tr><tr>
+		<td class="msgbox-cell-negative"></td><td class="msgbox-cell-negative" align="center"><span id="MessageBox_Negative_buttons"></span></td><td class="msgbox-cell-negative"></td>
+	</tr><tr>
+		<td class="negative_bottomLeft"></td><td class="msgbox-cell-negative"></td><td class="negative_bottomRight"></td>
+	</tr>
+</table>
+</Div><script language='javascript'>var __cmbInnerHtml=document.getElementById('MessageBox').innerHTML;</script>
+</div>
+				</td></tr>
+				<tr><td height="100%" class="itembrowser-form-bgwhite">
+					<!-- // BEGIN USER CONTROL // -->
+					<table height="100%" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tr><td>
+						<div class="itembroswer-form-div">
+							<table height="100%" cellpadding="0" cellspacing="0" border="0" width="100%">
+							<tr>
+							<td height="100%" valign="top">
+								<span id="Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpStart_ValidateValue" style="color:Red;display:none;"></span>
+<span id="Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpEnd_ValidateValue" style="color:Red;display:none;"></span>
+<span id="Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_valDateCompare" style="color:Red;display:none;"></span>
+<span id="Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_DescriptionLengthValidator" style="color:Red;display:none;"></span>
+ 
+<span id="Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc__hiddenFields"><input type="hidden" id="userID" name="userID" value="063d70e6-e80a-4bc2-bdc7-0883c0a8e9cb" /><input type="hidden" id="successUserPage" name="successUserPage" value="http://google.com" /><input type="hidden" id="errorUserPage" name="errorUserPage" value="http://yahoo.com" /></span>
+<table cellspacing="15">
+	<tr>
+		<td colspan="2">
+			<table style="width:100%;border-spacing:0;border-collapse:collapse;border-width:0;">
+	<tr>
+		<td class="cp-section-header" style="white-space:nowrap;padding:0;"></td>
+	</tr>
+</table>
+		</td>
+	</tr>
+	<tr>
+		<td width="50%" valign="top">
+			<TABLE cellpadding="4" cellspacing="0" border="0" width="100%">
+				<TR valign="top">
+					<TD id="Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_tdRequestName" align="right" class="itembrowser-form-label" nowrap="nowrap"><span class="itembrowser-form-required">*</span><span>Request Name </span>
+						</TD>
+
+					<TD width="100%">
+						<input name="Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc$txtRequestName" type="text" id="Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_txtRequestName" class="itembrowser-input-text" />
+					</TD>
+				</TR>
+				
+			</TABLE>
+		</td>
+		<td width="50%" valign="top">
+			<TABLE cellpadding="4" cellspacing="0" border="0" width="100%">
+				<TR valign="top">
+					<TD id="Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_tdProjectTypeDesc" align="right" class="itembrowser-form-label" nowrap="nowrap"><span>Type </span></TD>
+
+					<TD id="Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_tdProjectType" width="100%">Project</TD>
+
+				</TR>
+				
+				
+				
+				
+				
+			</TABLE>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<table width="100%" cellpadding="4" cellspacing="0" border="0">
+
+</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<table style="width:100%;border-spacing:0;border-collapse:collapse;border-width:0;">
+	<tr>
+		<td class="cp-section-header" style="white-space:nowrap;padding:0;">Upload Documents</td>
+	</tr>
+</table>
+		</td>
+	</tr>
+	<tr>
+		<td id="Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_tdDownload">
+		<DIV style="width:200px;">
+<style type="text/css">
+.fi    { width:300px; border:1px solid #a2a5b6;background-color: #f2f2f2; }
+.fil    { color:#2d477b;margin-top:5px;padding:2px 4px;border:1px solid white; background-color: white; display:inline-block; }
+</style>
+
+<script language="javascript">
+function FileInput_Add()
+{
+    var container;
+    var child;
+    window.focus();
+    if ((container = document.getElementById('__fic')) == null)
+        return;
+    child = document.createElement("INPUT");
+    child.type = "file";
+    child.name = "__fi";
+    child.className = "fi";
+    container.appendChild(child);
+}
+</script>
+<div id="__fic">
+	<input name="uploadField" type="file" id="uploadField" class="fi" />
+</div><a class="fil" onmouseover="this.style.border=&#39;1px solid #a2a5b6&#39;;this.style.backgroundColor=&#39;#f2f2f2&#39;;" onmouseout="this.style.border=&#39;1px solid white&#39;;this.style.backgroundColor=&#39;#ffffff&#39;;" href="javascript:void(FileInput_Add());">Add More</a><span id="Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_ctl08" style="color:Red;display:none;"></span></DIV></td>
+
+	</tr>
+</table>
+<span id="Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_ctl09" style="color:Red;display:none;"></span>
+							</td>
+							</tr>
+							<tr>
+							<td valign="bottom" height="35" >
+								<!-- // END USER CONTROL // -->
+								<!-- // BEGIN FOOTER BUTTON TABLE // //-->
+								<table height="34" cellpadding="0" cellspacing="0" border="0" width="100%">
+								<tr>
+								<td bgcolor="white" height="1"><img src="https://ppm.daptiv.com/7.0.0.7006/Media/Graphics/inv.gif" width=1 height=1 /></td>
+								</tr>
+								<tr>
+								<td class="itembrowser-footer" width="100%" height="34" >
+									<table cellpadding='0' cellspacing='0' border='0' width='100%' height='100%' style='table-layout: auto;'>
+<tr>
+<td width='33%' nowrap='nowrap' align='left'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%' style='table-layout: auto;'>
+<tr>
+</tr>
+</table>
+</td>
+<td width='34%' nowrap='nowrap' align='center'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%' style='table-layout: auto;'>
+<tr>
+<td><img src='https://ppm.daptiv.com/7.0.0.7006/Media/Graphics/inv.gif' width='20' height='1'/></td>
+<td>
+<input type="submit" name="ivButtonBar$btnFinish" value="Finish &amp; Save" onclick="if (typeof(Page_ClientValidate) == &#39;function&#39;) { var oldPage_IsValid = Page_IsValid; var oldPage_BlockSubmit = Page_BlockSubmit;if (Page_ClientValidate(&#39;&#39;) == false) { Page_IsValid = oldPage_IsValid; Page_BlockSubmit = oldPage_BlockSubmit; return false; }} $(this).prop(&#39;disabled&#39;,true);__doPostBack(&#39;ivButtonBar$btnFinish&#39;,&#39;&#39;);return false;WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ivButtonBar$btnFinish&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ivButtonBar_btnFinish" class="primaryButton" onmouseover="if(!this.disabled) this.className=&#39;primaryButtonOver&#39;" onmouseout="if(!this.disabled) this.className=&#39;primaryButton&#39;" onmousedown="if(!this.disabled) this.className=&#39;primaryButtonDown&#39;" onmouseup="if(!this.disabled) this.className=&#39;primaryButtonOver&#39;" balign="Center" /></td>
+<td style='width:100%'><img src='https://ppm.daptiv.com/7.0.0.7006/Media/Graphics/inv.gif' width='14' height='1'/></td>
+</tr>
+</table>
+</td>
+<td width='33%' nowrap='nowrap' align='right'>
+<table cellpadding='0' cellspacing='0' border='0' width='100%' style='table-layout: auto;'>
+<tr>
+<td><img src='https://ppm.daptiv.com/7.0.0.7006/Media/Graphics/inv.gif' width='20' height='1'/></td>
+<td>
+<input type="submit" name="ivButtonBar$btnCancel" value="Cancel" id="ivButtonBar_btnCancel" class="primaryButton" onmouseover="if(!this.disabled) this.className=&#39;primaryButtonOver&#39;" onmouseout="if(!this.disabled) this.className=&#39;primaryButton&#39;" onmousedown="if(!this.disabled) this.className=&#39;primaryButtonDown&#39;" onmouseup="if(!this.disabled) this.className=&#39;primaryButtonOver&#39;" balign="Right" /></td>
+<td style='width:100%'><img src='https://ppm.daptiv.com/7.0.0.7006/Media/Graphics/inv.gif' width='14' height='1'/></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br>
+								</td>
+								</tr>
+								</table>
+							</td>
+							</tr>
+							</table>
+						</div>
+					</td></tr>
+					</table>
+					<!-- // END FOOTER BUTTON TABLE // -->
+				</td></tr>
+			</table>
+		
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("MessageBox"));
+var Page_Validators =  new Array(document.getElementById("Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpStart_ValidateValue"), document.getElementById("Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpEnd_ValidateValue"), document.getElementById("Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_valDateCompare"), document.getElementById("Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_DescriptionLengthValidator"), document.getElementById("Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_ctl08"), document.getElementById("Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_ctl09"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var LocalizedResources = document.all ? document.all["LocalizedResources"] : document.getElementById("LocalizedResources");
+LocalizedResources.Button_Cancel = "Cancel";
+var Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpStart_ValidateValue = document.all ? document.all["Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpStart_ValidateValue"] : document.getElementById("Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpStart_ValidateValue");
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpStart_ValidateValue.controltovalidate = "Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpStartDate_day";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpStart_ValidateValue.errormessage = "The Start date is not valid";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpStart_ValidateValue.display = "None";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpStart_ValidateValue.type = "Date";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpStart_ValidateValue.dateorder = "dmy";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpStart_ValidateValue.cutoffyear = "2029";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpStart_ValidateValue.century = "2000";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpStart_ValidateValue.evaluationfunction = "CompareValidatorEvaluateIsValid";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpStart_ValidateValue.operator = "DataTypeCheck";
+var Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpEnd_ValidateValue = document.all ? document.all["Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpEnd_ValidateValue"] : document.getElementById("Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpEnd_ValidateValue");
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpEnd_ValidateValue.controltovalidate = "Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpEndDate_day";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpEnd_ValidateValue.errormessage = "The End date is not valid";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpEnd_ValidateValue.display = "None";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpEnd_ValidateValue.type = "Date";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpEnd_ValidateValue.dateorder = "dmy";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpEnd_ValidateValue.cutoffyear = "2029";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpEnd_ValidateValue.century = "2000";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpEnd_ValidateValue.evaluationfunction = "CompareValidatorEvaluateIsValid";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpEnd_ValidateValue.operator = "DataTypeCheck";
+var Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_valDateCompare = document.all ? document.all["Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_valDateCompare"] : document.getElementById("Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_valDateCompare");
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_valDateCompare.controltovalidate = "Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpStartDate_day";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_valDateCompare.errormessage = "Planned Finish must be after Planned Start.";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_valDateCompare.display = "None";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_valDateCompare.type = "Date";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_valDateCompare.dateorder = "dmy";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_valDateCompare.cutoffyear = "2029";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_valDateCompare.century = "2000";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_valDateCompare.evaluationfunction = "CompareValidatorEvaluateIsValid";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_valDateCompare.controltocompare = "Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpEndDate_day";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_valDateCompare.controlhookup = "Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_dpEndDate_day";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_valDateCompare.operator = "LessThanEqual";
+var Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_DescriptionLengthValidator = document.all ? document.all["Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_DescriptionLengthValidator"] : document.getElementById("Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_DescriptionLengthValidator");
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_DescriptionLengthValidator.controltovalidate = "Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_txtRequestDesc";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_DescriptionLengthValidator.errormessage = "The description cannot be longer than 4000 characters.";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_DescriptionLengthValidator.display = "None";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_DescriptionLengthValidator.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_DescriptionLengthValidator.validationexpression = "^[\\s\\S]{0,4000}$";
+var Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_ctl08 = document.all ? document.all["Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_ctl08"] : document.getElementById("Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_ctl08");
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_ctl08.display = "None";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_ctl08.evaluationfunction = "CustomValidatorEvaluateIsValid";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_ctl08.clientvalidationfunction = "fnValidate";
+var Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_ctl09 = document.all ? document.all["Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_ctl09"] : document.getElementById("Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_ctl09");
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_ctl09.controltovalidate = "Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_txtRequestName";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_ctl09.errormessage = "Request Name is a required field";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_ctl09.display = "None";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_ctl09.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+Admin_ProjectRequest_CreateProjectRequestWizard2_ascxee59a4b0_ff43_45b1_a1ef_d71437ee00bc_ctl09.initialvalue = "";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+                jQuery(function($){
+                    $.datepicker.regional['en'] = {
+                        clearText: 'Clear', clearStatus: 'Erase the current date',
+                        closeText: 'Close', closeStatus: 'Close without change',
+                        prevText: '&lt;Prev', prevStatus: 'Show the previous month',
+                        nextText: 'Next&gt;', nextStatus: 'Show the next month',
+                        currentText: 'Today', currentStatus: 'Show the current month',
+                        monthNames: ["January","February","March","April","May","June","July","August","September","October","November","December",""],
+                        monthNamesShort: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],
+                        monthStatus: 'Show a different month', yearStatus: 'Show a different year',
+                        weekHeader: 'Week', weekStatus: 'Week of the year',
+                        dayNames: ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+                        dayNamesShort: ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+                        dayNamesMin: ["Su","Mo","Tu","We","Th","Fr","Sa"],
+                        dayStatus: 'Set DD as first week day', dateStatus: 'Select D, M d',
+                        dateFormat: 'dd/mm/yy', firstDay: 1,
+                        initStatus: 'Select a date', isRTL: false,
+                        timeLabel: 'Time'
+                    }
+                    $.datepicker.setDefaults($.datepicker.regional['en']);
+                    if ($.culture) $.culture.calendar.patterns.d = 'dd/MM/yyyy';
+                });//]]>
+</script>
+<script src="https://ppm.daptiv.com/7.0.0.7006/scripts/daptiv/tabNavigation/tabNavigationModule.js"></script>
+                <script language="javascript">
+                    function changeFormAction() {
+                        var uniqueID = (new Date()).getTime() % 1000000000;
+
+                        document.forms[0].action = 'https://ppm.daptiv.com/admin/ProjectRequest/StaticWebForm/ProjectRequestStaticWebFormIO.aspx?oid=ee59a4b0-ff43-45b1-a1ef-d71437ee00bc|4f5a179a-0456-47dc-ba9c-cf6469148ae8&pageviewid=Admin/ProjectRequest/CreateProjectRequestWizard2.ascx&tab=Empty&nav=0&IsStaticWebForm=1&prtypeid=8122bd02-d121-4607-95f9-592045150f80';
+
+                        document.forms[0].action = document.forms[0].action.replace(/&uploadID=[\d]{0,}/gi,''); 
+ document.forms[0].action = document.forms[0].action + '&uploadID=' + uniqueID;;
+                        return true;
+                    }
+                </script>
+            <script language='javascript'>function openDateSelector() { alert('Not implemented in static web form.')}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>
+	</body>
+</html>
